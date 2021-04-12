@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>John Blee - Data Analyst</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!--  Mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!--  MapBox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+  
+  <!--  search bar plugin NOT NEEDED
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+ end search bar plugin-->
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">John Blee</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#page-top">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#about">About</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#services">Skills</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#portfolio">Projects</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- SEARCHBAR - NOT NEEDED
+  <div class="container h-10">
+    <div class="d-flex justify-content-center h-10">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="" placeholder="Search...">
+        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+-->
+
+  <!-- Header -->
+  <header class="masthead d-flex">
+    <div class="container text-left my-auto">
+      <h1 class="mb-1" style = "color:white;">John Blee</h1>
+      <h3 class="mb-5" style = "color:white;">
+        <em><u>Data Analyst</u> | <u>Computer Programmer</u></em>
+      </h3>
+      <a class="btn btn-light btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+    </div>
+    <div class="overlay"></div>
+  </header>
+  
+  <!-- About -->
+  <section class="content-section bg-light" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>About Me</h2>
+          <p class="lead mb-5 text-left">
+            ➤ I am a Data Analyst in the Twin Cities Metro area with 3.5 years of data analyst experience<br>
+            ➤ B.S. in <u><a href="https://www.stcloudstate.edu/programs/statistics/default.aspx" target = "_blank">Statistics: Data Science Concentration</a></u> from St. Cloud State University. <a href = "https://scsuhuskies.com/sports/mens-ice-hockey" target = "_blank"><u>Go Huskies!!</u></a><br>
+            ➤ 7 years of experience in healthcare industry<br><br>
+            
+            Current focus:<br>
+          <b></u>• Searching for a new full-time opportunity as a data analyst in a challenging and rewarding environment</b><br>
+            • Studying to obtain the SAS Base Programmer Certification (May 2021)<br>
+            • Refining my skills and staying sharp on techniques I haven't utilized recently with DataCamp<br><br>            
+            Near-future focus:<br>
+            • Complete the RProgrammer career track on DataCamp (Sept 2021)<br>
+            • Explore the actuary profession and actuary credentialing exams <br>
+             
+            <br>
+            Far-future focus:<br>
+            • Starting my own statistical consulting business <br><br>
+
+            In my spare time:<br>
+            • Collecting classic records<br>
+            • Adding more pins to this map - places I have gone hiking or canoeing:<br>
+            <div id='map'></div>
+            <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicGluZS10cmVlIiwiYSI6ImNrbXd1amQ5MTBpbzMydmxkd2J4NHdlaTAifQ.-e6mLczhCZb8MYjEi1XOrw'; // replace this with your access token
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/pine-tree/ckmwvr0hl096p17o4tcczhcyx', // replace this with your style URL
+              center: [-98.383837, 49.432643],
+              zoom: 1.8
+            });
+            // code from the next step will go here
+            map.on('click', function(e) {
+              var features = map.queryRenderedFeatures(e.point, {
+                layers: ['layer-name-here'] // replace this with the name of the layer
+              });
+
+              if (!features.length) {
+                return;
+              }
+
+              var feature = features[0];
+
+              var popup = new mapboxgl.Popup({ offset: [0, -15] })
+                .setLngLat(feature.geometry.coordinates)
+                .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+                .addTo(map);
+            });
+
+            </script>
+          <br><br><br>
+          </p>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What I Offer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container">
+      <div class="content-section-heading">
+        <h3 class="text-secondary mb-0">Skills</h3>
+        <h2 class="mb-5">What I Offer</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-database"></i>
+          </span>
+          <h4>
+            <strong>Experience With Massive Unstructured Data</strong>
+          </h4>
+          <p class="text-faded mb-0">I've encountered and wrangled all kinds of data in various disciplines (Healthcare, Education, Post-Secondary Education, Criminal Justice, Sociology, Medical Billing, Community Nonprofit, General Surveys). Messy datasets with thousands of variables and millions of observations.</p>
+          <br><br><br>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-users"></i>
+          </span>
+          <h4>
+            <strong>Exceptional Communication Skills</strong>
+          </h4>
+          <p class="text-faded mb-0">In my career I have interacted with patients, physicians, hospital administrators, corporate vice presidents and clients. I easily connect with people and have years of practice in communicating statistical concepts to a non technical audience.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-code"></i>
+          </span>
+          <h4>
+            <strong>Programming</strong>
+          </h4>
+          <p class="text-faded mb-0">Deep programming knowledge well beyond the typical data analyst. I can not only code programs to wrangle data and automate data tasks, I can optimize my code for minimal memory usage using complex abstract data types, dynamic memory allocation, and recursion. From Python, to JavaScript, to C++ I've debugged it all.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fa fa-briefcase"></i>
+          </span>
+          <h4>
+            <strong>Proven Results</strong>
+          </h4>
+          <p class="text-faded mb-0">I don't just write code. My programs and solutions have saved my employers hundreds of hours of labor and millions of dollars.</p>
+        </div>
+        
+      </div>
+
+<!-- 2nd row of skills-->
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fa fa-medkit"></i>
+          </span>
+          <h4>
+            <strong>7 Years of Experience in Healthcare</strong>
+          </h4>
+          <p class="text-faded mb-0">I have been in Healthcare for 7 years in a diverse range of roles. My range of different experiences allows me to make connections and understand the complex structure of healthcare delivery in the US.</p>
+          
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fa fa-comments"></i>
+          </span>
+          <h4>
+            <strong>Professionalism</strong>
+          </h4>
+          <p class="text-faded mb-0">Focused and driven by an inherent curiosity to ask why. I love collaborating on projects with coworkers and getting unique perspectives from everybody involved.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fa fa-cogs"></i>
+          </span>
+          <h4>
+            <strong>Diligent</strong>
+          </h4>
+          <p class="text-faded mb-0">I have a passion for data, statistics, and programming. I don't cut corners or take shortcuts. Ultimately, my passion will result in better performance over someone who perhaps has more experience because I am driven every day to complete work that I can be proud of.</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <span class="service-icon rounded-circle mx-auto mb-3">
+            <i class="fas fa-brain"></i>
+          </span>
+          <h4>
+            <strong>Quick Learner</strong>
+          </h4>
+          <p class="text-faded mb-0">As a statistical consultant for a wide range of projects I am accustomed to picking up subject matter quickly and becoming an expert. From writs of habeas corpus, to MCA/STAR student assesments and everything inbetween.</p>
+        </div>
+      </div>
+
+
+
+      <div class="content-section-heading"><br><br><br>
+        <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio">My Data Projects</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Quote -->
+  <section class="callout">
+    <div class="container text-center">
+      <h2 class="mx-auto mb-5" style = "color:white;">Harnessing Data<br>
+        to make<br>
+        <em>Sound, Data-Driven Decisions</em></h2>
+    </div>
+  </section>
+  
+  Photo by <a href="https://unsplash.com/@pietrozj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Pietro Jeng</a> on <a href="https://unsplash.com/s/photos/data?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+  
+  <!-- Portfolio -->
+  <section class="content-section" id="portfolio">
+    <div class="container">
+      <div class="content-section-heading text-center">
+        <h3 class="text-secondary mb-0">My Projects</h3>
+        <h2 class="mb-5">Data and Coding Projects</h2>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="https://github.com/John-B-Data-Analyst" target = "_blank">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">SQL</div>
+                <p class="mb-0">My Own SQL Database Made From Scratch</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="https://github.com/John-B-Data-Analyst" target = "_blank">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">"Distribution-Free"</div>
+                <p class="mb-0">A look at one of my assignments from a Non-Parametric Statistics course in school written in R</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="https://github.com/John-B-Data-Analyst" target = "_blank">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">Hangman</div>
+                <p class="mb-0">A simple hangman game with a US presidents theme written in JavaScript</p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="https://github.com/John-B-Data-Analyst" target = "_blank">
+            <div class="caption">
+              <div class="caption-content">
+                <div class="h2">¿Queue?</div>
+                <p class="mb-0">A project leveraging the queue abstract data type in <em>C++</em></p>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Quote 2 
+<section class="callout" id = "Quote2">
+    <div class="container text-center">
+    <h3 class="mx-auto mb-5" style = "color:white;">"To consult the statistician after an experiment<br>is finished is often merely to ask him to conduct a post mortem<br> examination. <em>He can perhaps say what the experiment died of.</em>"
+    <br>
+    </h3>
+  <img class="img-fluid" src="img/quote-2.jpg" alt="">
+  </div>
+</section>
+-->
+
+<!-- Quote 2  -->
+<section class="content-section bg-quote2" id = "quote2">
+  <div class="container text-center">
+    <h2 class="mx-auto mb-5" style = "color:white;">"To consult the statistician after an experiment is finished is often<br>
+      merely to ask him to conduct a post mortem examination.<br>
+      <em>He can perhaps say what the experiment died of."</em></h2>
+  </div>
+</section>
+Photo by <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target = "_blank">NASA</a> on <a href="https://unsplash.com/s/photos/planet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target = "_blank">Unsplash</a>
+
+
+  <!-- Call to Action -->
+  <section class="content-section bg-primary text-white" id = "contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Let's Connect!</h2>
+      <a href="https://www.linkedin.com/in/john-blee-1454844a/" class="btn btn-xl btn-light mr-4" target = "_blank">Connect with me on Linkedin  <i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/John-B-Data-Analyst" class="btn btn-xl btn-light mr-4" target = "_blank">Check out my stuff on GitHub  <i class="fab fa-github-square"></i></a>
+    </div>
+  </section>
+
+  <!-- Quote 3 -->
+  <section class = "content-section bg-quote3" id = "quote3">
+    <div class = "container text-center">
+      <h2 class = "mx-auto mb-5" style = "color:yellow;">
+      </h2>
+    </div>
+  </section>
+
+  <!-- Random Number Generator-->
+  <!--
+<section class = "content-section bg-primary text-white">
+  <div class = "container text-center">
+    <h2 class = "mb-4">My favorite random number generator</h2>
+      <a href = "https://www.random.org/" class = "btn btn-xl btn-light mr-4" target = "_blank">Check it out</a>
+  </div>
+</section>
+-->
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/john-blee-1454844a/" target = "_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://github.com/John-B-Data-Analyst" target = "_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; John Blee 2021</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>
+
+<!--
+  {'Seal River', 58.808618, -97.879810},                                DONE
+            {'Berens River', 52.204120, -95.964406}, DONE
+            {'Pigeon River', 51.900257, -95.962823}, DONE
+            {'Bloodvein River', 51.523344, -95.870549},  DONE
+            {'Burntside Lake', 47.928839, -92.004851},  DONE
+            {'Silver Bay', 47.343977, -91.215426}, DONE
+            {'Splitrock Lighthouse State Park', 47.200503, -91.422274}, DONE
+            {'Interstate State Park', 45.389678, -92.662521}, DONE
+            {'Manchester, TN', 35.475668, -86.045402}, DONE
+            {'Yellowstone National Park', 44.502495, -110.389844}, DONE
+            {'Glacier National Park', 48.607505, -113.898176}, DONE
+            {'Bighorn Mountains', 44.379114, -107.175316}, DONE
+            {'Copper Mountain', 39.499269, -106.157184}, DONE
+            {'Sangre de Cristo Mountains', 36.889144, -105.322951},DONE
+            {'Banff National Park', 51.412438, -116.227812},
+
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const seal = { lat: 58.808618, lng: -97.879810 };
+ 	const berens = {lat: 52.204120, lng: -95.964406};
+  const pigeon = {lat: 51.900257, lng: -95.962823};
+  const bloodvein = {lat: 51.523344, lng: -95.870549};
+  const burntside = {lat: 47.928839, lng: -92.004851};
+  const silverBay = {lat: 47.343977, lng: -91.215426};
+  const splitrock = {lat: 47.200503, lng: -91.422274};
+  const interstate = {lat: 45.389678, lng: -92.662521};
+  const manchester = {lat: 35.475668, lng: -86.045402};
+  const yellowstone = {lat: 44.502495, lng: -110.389844};
+  const glacier = {lat: 48.607505, lng: -113.898176};
+  const bighorn = {lat: 44.379114, lng: -107.175316};
+  const copperMountain = {lat: 39.499269, lng: -106.157184};
+  const sangreDeCristo = {lat: 36.889144, lng: -105.322951};
+  const banff = {lat: 51.412438, lng: -116.227812};
+  const tennessee = {lat: 35.782672, lng: -83.113931};
+  const centerMap = {lat: 39.970434, lng: -101.435926};
+  
+  // The map, centered at Seal River
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 3,
+    center: centerMap,
+  });
+  // The marker, positioned at Seal River
+  const markerSeal = new google.maps.Marker({
+    position: seal,
+    map: map,
+    title: "Seal River",
+  });
+  
+  const markerBerens = new google.maps.Marker({
+    position: berens,
+    map: map,
+    title: "Berens River",
+  });
+  
+  const markerPigeon = new google.maps.Marker({
+    position: pigeon,
+    map: map,
+    title: "Pigeon River",
+  });
+  
+  const markerBloodvein = new google.maps.Marker({
+    position: bloodvein,
+    map: map,
+    title: "Bloodvein River",
+  });
+  
+  const markerBurntside = new google.maps.Marker({
+    position: burntside,
+    map: map,
+    title: "Burntside Lake",
+  });
+  
+  const markerSilverBay = new google.maps.Marker({
+    position: silverBay,
+    map: map,
+    title: "Silver Bay",
+  });
+  
+  const markerSplitrock = new google.maps.Marker({
+    position: splitrock,
+    map: map,
+    title: "Splitrock",
+  });
+  
+  const markerInterstate = new google.maps.Marker({
+    position: interstate,
+    map: map,
+    title: "Interstate Park",
+  });
+  
+  const markerManchester = new google.maps.Marker({
+    position: manchester,
+    map: map,
+    title: "Manchester, TN",
+  });
+  
+  const markerYellowstone = new google.maps.Marker({
+    position: yellowstone,
+    map: map,
+    title: "Yellowstone National Park",
+  });
+  
+  const markerGlacier = new google.maps.Marker({
+    position: glacier,
+    map: map,
+    title: "Glacier National Park, MT",
+  });
+  
+  const markerBighorn = new google.maps.Marker({
+    position: bighorn,
+    map: map,
+    title: "Bighorn Mountains, WY",
+  });
+  
+   const markerCopperMountain = new google.maps.Marker({
+    position: copperMountain,
+    map: map,
+    title: "Copper Mountain, CO",
+  });
+  const markerSangre = new google.maps.Marker({
+    position: sangreDeCristo,
+    map: map,
+    title: "Sangre de Cristo Mountains, NM",
+  });
+  
+  const markerBanff = new google.maps.Marker({
+    position: banff,
+    map: map,
+    title: "Banff National Park",
+  });
+  
+   const markerTN = new google.maps.Marker({
+    position: tennessee,
+    map: map,
+    title: "Appalachian Trail",
+  });
+}
+-->
+
+
+<!--
+              <div id='map' style='width: 350px; height: 300px;'></div>
+              <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicGluZS10cmVlIiwiYSI6ImNrbXd1amQ5MTBpbzMydmxkd2J4NHdlaTAifQ.-e6mLczhCZb8MYjEi1XOrw';
+                  var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [-101.435926, 39.970434],
+                    zoom: 1.6,
+                  })
+                
+                  var markerSeal = new mapboxgl.Marker()
+                  .setLngLat([-97.879810, 58.808618])
+                  .addTo(map);
+                  var markerBerens = new mapboxgl.Marker()
+                  .setLngLat([-95.964406,52.204120])
+                  .addTo(map);
+
+              </script>
+-->
