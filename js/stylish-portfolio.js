@@ -82,6 +82,9 @@ function initMap() {
   const sangreDeCristo = {lat: 36.889144, lng: -105.322951};
   const banff = {lat: 51.412438, lng: -116.227812};
   const tennessee = {lat: 35.782672, lng: -83.113931};
+  const palmerLakesTrail = {lat: 60.783660, lng: -149.544985};
+  const grandCanyon = {lat: 36.061717, lng: -112.107574};
+  const superiorHikingTrail = {lat: 47.114073, lng: -91.765060};
   const centerMap = {lat: 39.970434, lng: -101.435926};
   
   // The map, centered at Seal River
@@ -184,4 +187,20 @@ function initMap() {
     map: map,
     title: "Appalachian Trail",
   });
+  // Below points added 3/12/23
+  const markerPalmerLakes = new google.maps.Marker({
+    position: palmerLakesTrail,
+    map: map,
+    title: "Palmer Lakes Trail, Hope, AK"
+  })
+  const markerArizona = new google.maps.Marker({
+    position: grandCanyon,
+    map: map,
+    title: "Grand Canyon National Park, AZ"
+  })
+  const markerSuperiorHikingTrail = new google.maps.Marker({
+    position: superiorHikingTrail,
+    map: map,
+    title: "Superior Hiking Trail, Section 2"
+  })
 }
