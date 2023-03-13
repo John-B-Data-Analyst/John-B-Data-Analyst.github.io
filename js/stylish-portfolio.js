@@ -192,16 +192,16 @@ function initMap() {
     position: palmerLakesTrail,
     map: map,
     title: "Palmer Lakes Trail, Hope, AK"
-  })
+  });
   const markerArizona = new google.maps.Marker({
     position: grandCanyon,
     map: map,
     title: "Grand Canyon National Park, AZ"
-  })
+  });
   const markerSuperiorHikingTrail = new google.maps.Marker({
     position: superiorHikingTrail,
     map: map,
     title: "Superior Hiking Trail, Section 2"
-  })
+  });
   
 }
