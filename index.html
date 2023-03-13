@@ -228,7 +228,8 @@
             • Power BI<br>
             • Tableau<br> 
             • Alteryx<br>
-            • Github                  
+            • Github<br>
+            • <i class="fab fa-github-square"></i>                
           </p>
           
         </div>
@@ -243,7 +244,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="fa fa-cog fa-spin" style="font-size:24px"></i>
+            <i class="fa fa-cog fa-spin" style="font-size:48px"></i>
           </span>
           <h4>
             <strong>Diligent</strong>
@@ -424,167 +425,3 @@ Photo by <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=refe
 </body>
 
 </html>
-
-<!--
-  {'Seal River', 58.808618, -97.879810},                                DONE
-            {'Berens River', 52.204120, -95.964406}, DONE
-            {'Pigeon River', 51.900257, -95.962823}, DONE
-            {'Bloodvein River', 51.523344, -95.870549},  DONE
-            {'Burntside Lake', 47.928839, -92.004851},  DONE
-            {'Silver Bay', 47.343977, -91.215426}, DONE
-            {'Splitrock Lighthouse State Park', 47.200503, -91.422274}, DONE
-            {'Interstate State Park', 45.389678, -92.662521}, DONE
-            {'Manchester, TN', 35.475668, -86.045402}, DONE
-            {'Yellowstone National Park', 44.502495, -110.389844}, DONE
-            {'Glacier National Park', 48.607505, -113.898176}, DONE
-            {'Bighorn Mountains', 44.379114, -107.175316}, DONE
-            {'Copper Mountain', 39.499269, -106.157184}, DONE
-            {'Sangre de Cristo Mountains', 36.889144, -105.322951},DONE
-            {'Banff National Park', 51.412438, -116.227812},
-
-
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  const seal = { lat: 58.808618, lng: -97.879810 };
- 	const berens = {lat: 52.204120, lng: -95.964406};
-  const pigeon = {lat: 51.900257, lng: -95.962823};
-  const bloodvein = {lat: 51.523344, lng: -95.870549};
-  const burntside = {lat: 47.928839, lng: -92.004851};
-  const silverBay = {lat: 47.343977, lng: -91.215426};
-  const splitrock = {lat: 47.200503, lng: -91.422274};
-  const interstate = {lat: 45.389678, lng: -92.662521};
-  const manchester = {lat: 35.475668, lng: -86.045402};
-  const yellowstone = {lat: 44.502495, lng: -110.389844};
-  const glacier = {lat: 48.607505, lng: -113.898176};
-  const bighorn = {lat: 44.379114, lng: -107.175316};
-  const copperMountain = {lat: 39.499269, lng: -106.157184};
-  const sangreDeCristo = {lat: 36.889144, lng: -105.322951};
-  const banff = {lat: 51.412438, lng: -116.227812};
-  const tennessee = {lat: 35.782672, lng: -83.113931};
-  const centerMap = {lat: 39.970434, lng: -101.435926};
-  
-  // The map, centered at Seal River
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 3,
-    center: centerMap,
-  });
-  // The marker, positioned at Seal River
-  const markerSeal = new google.maps.Marker({
-    position: seal,
-    map: map,
-    title: "Seal River",
-  });
-  
-  const markerBerens = new google.maps.Marker({
-    position: berens,
-    map: map,
-    title: "Berens River",
-  });
-  
-  const markerPigeon = new google.maps.Marker({
-    position: pigeon,
-    map: map,
-    title: "Pigeon River",
-  });
-  
-  const markerBloodvein = new google.maps.Marker({
-    position: bloodvein,
-    map: map,
-    title: "Bloodvein River",
-  });
-  
-  const markerBurntside = new google.maps.Marker({
-    position: burntside,
-    map: map,
-    title: "Burntside Lake",
-  });
-  
-  const markerSilverBay = new google.maps.Marker({
-    position: silverBay,
-    map: map,
-    title: "Silver Bay",
-  });
-  
-  const markerSplitrock = new google.maps.Marker({
-    position: splitrock,
-    map: map,
-    title: "Splitrock",
-  });
-  
-  const markerInterstate = new google.maps.Marker({
-    position: interstate,
-    map: map,
-    title: "Interstate Park",
-  });
-  
-  const markerManchester = new google.maps.Marker({
-    position: manchester,
-    map: map,
-    title: "Manchester, TN",
-  });
-  
-  const markerYellowstone = new google.maps.Marker({
-    position: yellowstone,
-    map: map,
-    title: "Yellowstone National Park",
-  });
-  
-  const markerGlacier = new google.maps.Marker({
-    position: glacier,
-    map: map,
-    title: "Glacier National Park, MT",
-  });
-  
-  const markerBighorn = new google.maps.Marker({
-    position: bighorn,
-    map: map,
-    title: "Bighorn Mountains, WY",
-  });
-  
-   const markerCopperMountain = new google.maps.Marker({
-    position: copperMountain,
-    map: map,
-    title: "Copper Mountain, CO",
-  });
-  const markerSangre = new google.maps.Marker({
-    position: sangreDeCristo,
-    map: map,
-    title: "Sangre de Cristo Mountains, NM",
-  });
-  
-  const markerBanff = new google.maps.Marker({
-    position: banff,
-    map: map,
-    title: "Banff National Park",
-  });
-  
-   const markerTN = new google.maps.Marker({
-    position: tennessee,
-    map: map,
-    title: "Appalachian Trail",
-  });
-}
--->
-
-
-<!--
-              <div id='map' style='width: 350px; height: 300px;'></div>
-              <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicGluZS10cmVlIiwiYSI6ImNrbXd1amQ5MTBpbzMydmxkd2J4NHdlaTAifQ.-e6mLczhCZb8MYjEi1XOrw';
-                  var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/mapbox/streets-v11',
-                    center: [-101.435926, 39.970434],
-                    zoom: 1.6,
-                  })
-                
-                  var markerSeal = new mapboxgl.Marker()
-                  .setLngLat([-97.879810, 58.808618])
-                  .addTo(map);
-                  var markerBerens = new mapboxgl.Marker()
-                  .setLngLat([-95.964406,52.204120])
-                  .addTo(map);
-
-              </script>
--->
