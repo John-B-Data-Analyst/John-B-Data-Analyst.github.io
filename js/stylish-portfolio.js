@@ -188,7 +188,7 @@ function initMap() {
     title: "Appalachian Trail",
   });
   // Below points added 3/12/23
-  /*const markerPalmerLakes = new google.maps.Marker({
+  const markerPalmerLakes = new google.maps.Marker({
     position: palmerLakesTrail,
     map: map,
     title: "Palmer Lakes Trail, Hope, AK"
@@ -203,5 +203,5 @@ function initMap() {
     map: map,
     title: "Superior Hiking Trail, Section 2"
   })
-  */
+  
 }
